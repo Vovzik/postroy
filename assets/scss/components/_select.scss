@@ -1,0 +1,102 @@
+.select {
+  position: relative;
+  margin-bottom: rem(10px);
+
+  &__trigger {
+    padding-right: rem(29px);
+    position: relative;
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(18px);
+    font-weight: 500;
+    color: #001960;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:before {
+      content: '';
+      width: rem(24px);
+      height: rem(24px);
+      background: url("../img/select/arrow.svg") no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      transition: 0.4s ease-out;
+    }
+    &.active:before {
+       transform: rotate(180deg);
+    }
+  }
+
+
+  &__arrow {
+    position: absolute;
+    top: rem(27px);
+    right: rem(21px);
+  }
+
+  &__arrow svg {
+    transform: rotate(0deg);
+  }
+
+  &__trigger.active &__arrow svg {
+    transform: rotate(180deg);
+  }
+
+
+  &__drop {
+    display: none;
+    width: 100%;
+    padding: rem(10px) 0;
+    background-color: #fff;
+    border-top: none;
+    position: absolute;
+    z-index: 10;
+    border-radius: rem(5px);
+    margin-top: rem(5px);
+
+    select {
+      display: none;
+    }
+  }
+
+  &__drop.open {
+    display: block;
+  }
+
+
+  &__drop label {
+    display: block;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(14px);
+    font-weight: 500;
+    color: #001960;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    span {
+      display: block;
+      padding: rem(5px) rem(20px);
+      transition: 0.4s ease-out;
+      &:hover,
+      &.checked {
+        background: #001960;
+        color: #ffffff;
+      }
+    }
+  }
+
+}

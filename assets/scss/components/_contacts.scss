@@ -1,0 +1,132 @@
+.contacts {
+  &__content {
+    padding: rem(25px) 0px;
+  }
+
+  &__title {
+    font-size: rem(40px);
+    line-height: 130%;
+    font-weight: 700;
+    color: #001960;
+    text-transform: uppercase;
+    padding-left: rem(50px);
+    margin-bottom: rem(40px);
+    @media (max-width: 480px) {
+      font-size: rem(28px);
+      padding-left: rem(0px);
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: rem(15px);
+    margin-bottom: rem(40px);
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: rem(5px);
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &__item {
+    border-radius: rem(5px);
+    background: #EFF0F7;
+    padding: rem(30px);
+    @media (max-width: 480px) {
+      padding: rem(25px);
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(24px);
+    line-height: 130%;
+    font-weight: 600;
+    color: #001960;
+    text-transform: uppercase;
+    margin-bottom: rem(30px);
+    @media (max-width: 480px) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__phone {
+    font-family: "Raleway-4020", sans-serif;
+    line-height: 130%;
+    font-weight: 500;
+    font-size: rem(24px);
+    color: #001960;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    padding-left: rem(34px);
+    background: url("../img/contacts/phone.svg") no-repeat;
+    background-position: 0px rem(5px);
+    text-decoration: underline;
+    transition: 0.4s ease-out;
+    margin-bottom: rem(10px);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__text {
+    font-family: "Raleway-4020", sans-serif;
+    font-weight: 400;
+    font-size: rem(18px);
+    color: #001960;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    margin-bottom: rem(5px);
+    @media (max-width: 480px) {
+      font-size: rem(16px);
+    }
+  }
+
+  &__link {
+    border-radius: rem(5px);
+    background: #001960;
+    padding: rem(10px) rem(23px);
+    font-weight: 500;
+    font-size: rem(15px);
+    color: #ffffff;
+    text-align: center;
+    transition: 0.4s ease-out;
+    margin-top: rem(5px);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__requisites {
+    font-family: "Raleway-4020", sans-serif;
+    font-weight: 400;
+    font-size: rem(15px);
+    color: #001960;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    margin-top: rem(10px);
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: rem(476px);
+    border-radius: rem(5px);
+    overflow: hidden;
+    @media (max-width: 480px) {
+       height: rem(354px);
+    }
+  }
+}

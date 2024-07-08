@@ -1,0 +1,91 @@
+.footer-navigation-mobail {
+  display: none;
+
+  &__item {
+    border-radius: rem(5px);
+    background: #F4F6F9;
+    min-height: rem(54px);
+    padding: rem(5px) rem(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: rem(12px);
+    font-weight: 500;
+    color: #001960;
+    position: relative;
+    &--home:before {
+      content: '';
+      width: rem(28px);
+      height: rem(28px);
+      background: url("../img/footer-navigation-mobail/1.svg") no-repeat;
+      background-size: 100% 100%;
+      margin-bottom: rem(2px);
+    }
+    &--catalog:before {
+      content: '';
+      width: rem(28px);
+      height: rem(28px);
+      background: url("../img/footer-navigation-mobail/2.svg") no-repeat;
+      background-size: 100% 100%;
+      margin-bottom: rem(2px);
+    }
+    &--basket:before {
+      content: '';
+      width: rem(28px);
+      height: rem(28px);
+      background: url("../img/footer-navigation-mobail/3.svg") no-repeat;
+      background-size: 100% 100%;
+      margin-bottom: rem(2px);
+    }
+    &--support:before {
+      content: '';
+      width: rem(28px);
+      height: rem(28px);
+      background: url("../img/footer-navigation-mobail/4.svg") no-repeat;
+      background-size: 100% 100%;
+      margin-bottom: rem(2px);
+    }
+    &--search:before {
+      content: '';
+      width: rem(28px);
+      height: rem(28px);
+      background: url("../img/footer-navigation-mobail/5.svg") no-repeat;
+      background-size: 100% 100%;
+      margin-bottom: rem(2px);
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: rem(-7px);
+    right: rem(-7px);
+    background: #001960;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: rem(3px);
+    width: rem(25px);
+    height: rem(25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    div {
+      line-height: 93%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    position: fixed;
+    bottom: rem(0px);
+    padding: rem(8px) rem(15px);
+    background: #ffffff;
+    left: 0px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: rem(5px);
+    z-index: 1;
+  }
+}

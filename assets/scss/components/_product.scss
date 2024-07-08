@@ -1,0 +1,206 @@
+.product {
+  &__item {
+    border-radius: rem(5px);
+    background: #ffffff;
+    padding: rem(20px) rem(22px) rem(75px) rem(22px);
+    position: relative;
+    transition: 0.4s ease-out;
+  }
+
+
+   &__box {
+     width: 100%;
+     margin-bottom: rem(23px);
+     text-align: center;
+     img {
+       transition: 0.4s ease-out;
+       height: auto;
+     }
+     &:hover img {
+       transform: scale(1.07);
+     }
+   }
+
+
+  &__title {
+    margin-bottom: rem(20px);
+  }
+
+  &__title-link {
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(18px);
+    font-weight: 500;
+    color: #001960;
+    line-height: 130%;
+    transition: 0.4s ease-out;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__attributes-item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: rem(5px);
+    }
+  }
+
+  &__label {
+    font-size: rem(14px);
+    font-weight: 500;
+    color: #7F8BAF;
+  }
+
+  &__value {
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(14px);
+    font-weight: 500;
+    color: #1D1D1D;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    display: inline;
+    p {
+      display: inline;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: rem(20px);
+    padding: 0px rem(22px);
+    left: rem(0px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    a {
+      border-radius: rem(3px);
+      min-width: rem(80px);
+      background-color: #001960 !important;
+      transition: 0.4s ease-out;
+      padding: rem(6px) !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      color: #ffff !important;
+      font-weight: 400 !important;
+      text-align: center;
+      font-size: 15px !important;
+      &:hover {
+        transform: scale(1.07);
+      }
+      & + a {
+        display: none !important;
+      }
+      &:after {
+        font-size: rem(16px) !important;
+        color: #ffffff;
+        margin-left: rem(5px) !important;
+      }
+      &.loading:after {
+        position: static !important;
+      }
+    }
+
+    .product_type_simple.add_to_cart_button:before {
+        content: '';
+        display: block !important;
+        width: rem(21px);
+        height: rem(21px);
+        background: url("../img/cart/icon.svg") no-repeat;
+        background-size: 100% 100%;
+        flex: 0 0 auto;
+    }
+
+    .product_type_simple {
+      font-size: 0px !important;
+      span {
+        font-size: 14px !important;
+        margin-left: rem(2px);
+      }
+    }
+  }
+
+
+
+  &__price {
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(24px);
+    font-weight: 700;
+    color: #001960;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    width: rem(134px);
+  }
+
+  &__add-cart {
+    border-radius: rem(3px);
+    background: #001960 url("../img/cart/icon.svg") no-repeat;
+    background-position: center;
+    width: rem(80px);
+    height: rem(33px);
+  }
+
+  @media (max-width: 1199px) {
+    &__title-link {
+      font-size: rem(16px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__title-link {
+      font-size: rem(14px);
+    }
+
+    &__price {
+      font-size: rem(16px);
+    }
+
+    &__label,
+    &__value {
+      font-size: rem(12px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__price {
+      width: 100%;
+      margin-bottom: rem(10px);
+    }
+
+    &__item {
+      padding: rem(10px);
+      padding-bottom: rem(87px);
+    }
+
+    &__bottom {
+      padding: 0px rem(10px);
+    }
+
+    &__attributes-item:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      bottom: rem(10px);
+      a {
+        font-size: rem(12px) !important;
+        line-height: 120%;
+        width: 100%;
+      }
+    }
+  }
+}

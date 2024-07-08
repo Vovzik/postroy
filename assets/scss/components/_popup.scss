@@ -1,0 +1,167 @@
+.popup {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.4s ease;
+  z-index: 1000;
+  overflow: auto;
+  cursor: pointer;
+
+  &.js__popup-open {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.js__popup-open.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__body {
+    min-height: 100%;
+    padding: 30px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__content {
+    cursor: default;
+    position: relative;
+    padding: rem(50px) rem(64px);
+    background: #ffffff;
+    border-radius: rem(10px);
+    width: rem(566px);
+  }
+
+  &__title {
+    font-size: rem(24px);
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #001960;
+    margin-bottom: rem(15px);
+  }
+
+  &__text {
+    font-size: rem(18px);
+    font-weight: 400;
+    line-height: 130%;
+    color: #001960;
+    margin-bottom: rem(30px);
+  }
+
+
+  &__close {
+    position: absolute;
+    top: rem(15px);
+    right: rem(15px);
+    cursor: pointer;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: rem(10px);
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: rem(5px);
+    border: rem(1px) solid #8F9ABA;
+    padding: 0px rem(15px);
+    height: rem(39px);
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(15px);
+    font-weight: 400;
+    color: #8F9ABA;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+
+    &::placeholder {
+      color: #8F9ABA;
+    }
+  }
+
+  .wpcf7-form-control-wrap[data-name="file-470"] {
+    display: none;
+  }
+
+  #progress-bar,
+  #gallery {
+    display: none;
+  }
+
+  &__file-label {
+    font-size: rem(15px);
+    font-weight: 400;
+    color: #001960;
+    padding-left: rem(34px);
+    position: relative;
+    margin-bottom: rem(23px);
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    display: block;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:before {
+      content: '';
+      width: rem(24px);
+      height: rem(24px);
+      background: url("../img/popup/pin.svg") no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    border-radius: rem(5px);
+    background: #001960;
+    padding: rem(10px) rem(10px) rem(11px) rem(10px);
+    text-align: center;
+    transition: 0.4s ease-out;
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(15px);
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: rem(10px);
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__text-policy {
+    font-size: rem(15px);
+    font-weight: 400;
+    color: #001960;
+    text-align: center;
+    a {
+      color: #001960;
+      display: inline;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(20px);
+    }
+  }
+}

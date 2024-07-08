@@ -1,0 +1,337 @@
+.home {
+  &__content {
+    padding: rem(168px) 0px rem(25px);
+  }
+
+  &__slider {
+    overflow: hidden;
+    border-radius: rem(10px);
+    background: #F4F6F9;
+    padding: rem(10px) rem(10px) rem(10px) rem(53px);
+    position: relative;
+  }
+
+  &__no-subcategory {
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  &__none-categories-box {
+    display: none;
+  }
+
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__slide {
+    display: flex;
+  }
+
+  &__info {
+    width: rem(641px);
+    margin-right: rem(48px);
+    position: relative;
+    padding: rem(37px) 0px rem(143px);
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: rem(40px);
+    right: rem(-13px);
+    width: rem(200px);
+  }
+
+  &__title {
+    font-size: rem(40px);
+    font-weight: 700;
+    line-height: 130%;
+    color: #001960;
+    margin-bottom: rem(21px);
+  }
+
+  &__text {
+    font-size: rem(16px);
+    color: #001960;
+    margin-bottom: rem(30px);
+    max-width: rem(547px);
+    line-height: 145%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .redactor-wordpress {
+    max-width: rem(430px);
+  }
+
+  &__btn {
+    border-radius: rem(5px);
+    border: rem(1px) solid #001960;
+    padding: rem(8px);
+    width: rem(164px);
+    text-align: center;
+    font-size: rem(15px);
+    font-weight: 500;
+    color: #001960;
+    transition: 0.4s ease-out;
+    margin-top: rem(20px);
+    &:hover {
+      color: #ffffff;
+      background: #001960;
+    }
+  }
+
+  &__box {
+    width: rem(551px);
+    min-height: rem(392px);
+    border-radius: rem(5px);
+    overflow: hidden;
+    position: relative;
+    padding: rem(93px) rem(50px) rem(60px) rem(50px);
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background: rgba(0, 0, 0, 0.47);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.9s ease-out;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__list {
+    -moz-column-gap: rem(10px);
+    -webkit-column-gap: rem(10px);
+    column-gap: rem(10px);
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__list-item {
+    margin-bottom: rem(20px);
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__list-link {
+    font-size: rem(18px);
+    color: #ffffff;
+    text-decoration: underline;
+    display: flex;
+
+    &:before {
+      content: '';
+      width: rem(0px);
+      height: rem(20px);
+      background: #ffffff url("../img/home/arrow2.svg") no-repeat;
+      background-position: center;
+      border-radius: rem(2px);
+      flex: 0 0 auto;
+      margin-right: rem(10px);
+      transition: 0.4s ease-out;
+      opacity: 0;
+    }
+
+    &:hover:before {
+      width: rem(20px);
+      opacity: 1;
+    }
+  }
+
+  &__list-item.active &__list-link:before {
+    width: rem(20px);
+    opacity: 1;
+  }
+
+  &__link {
+    padding: rem(10px) rem(47px) rem(10px) rem(15px);
+    border-radius: rem(5px);
+    background: #ffffff3b;
+    font-size: rem(15px);
+    font-weight: 500;
+    line-height: 155%;
+    color: #ffffff;
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+    transition: 0.4s ease-out;
+
+    &:before {
+      content: '';
+      width: rem(39px);
+      height: rem(39px);
+      background: #ffffff url("../img/home/arrow.svg") no-repeat;
+      background-position: center;
+      position: absolute;
+      top: rem(2px);
+      right: rem(2px);
+      border-radius: rem(3px);
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    bottom: rem(50px);
+    left: rem(50px);
+    z-index: 1;
+  }
+
+  @media (max-width: 1350px) {
+    &__content {
+      padding-top: rem(200px);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &__decor {
+      width: rem(200px);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__content {
+      padding-top: rem(121px);
+    }
+    &__info {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+    &__box {
+      display: none;
+    }
+
+    &__slider {
+      padding: rem(25px) rem(20px) rem(91px) rem(20px);
+    }
+
+    &__decor {
+      position: static;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: rem(25px);
+    }
+
+    &__btn {
+      width: 100%;
+    }
+
+    &__navigation {
+      left: 50%;
+      transform: translate(-50%, 0px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding-top: rem(10px);
+    }
+
+    &__title {
+      font-size: rem(28px);
+      margin-bottom: rem(13px);
+    }
+
+    &__navigation {
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__text {
+      font-size: rem(15px);
+    }
+
+    &__navigation {
+      bottom: rem(25px);
+    }
+
+    &__slider {
+      padding: rem(25px) rem(20px) rem(71px) rem(20px);
+    }
+  }
+
+}
+
+
+.home-prev,
+.home-next {
+  width: rem(25px);
+  height: rem(25px);
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: 0.4s ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.home-prev {
+  background: url("../img/home/prev.svg") no-repeat;
+  background-position: center;
+}
+
+.home-next {
+  background: url("../img/home/next.svg") no-repeat;
+  background-position: center;
+}
+
+.home-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px rem(15px);
+  width: auto !important;
+}
+
+.home-pagination .swiper-pagination-bullet {
+  width: rem(25px);
+  height: rem(25px);
+  background: #DCE0EB;
+  border-radius: rem(3px);
+  opacity: 1;
+  margin: 0px !important;
+  transition: 0.4s ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:not(:last-child) {
+    margin-right: rem(5px) !important;
+  }
+}
+
+.home-pagination .swiper-pagination-bullet-active {
+  background: #001960;
+}
+

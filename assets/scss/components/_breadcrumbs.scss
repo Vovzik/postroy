@@ -1,0 +1,64 @@
+.breadcrumbs div > span {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0px;
+  padding: rem(163px) 0px rem(20px);
+}
+.breadcrumbs div > span span {
+  font-family: "Raleway-4020", sans-serif;
+  font-size: rem(14px);
+  font-weight: 500;
+  color: #7F8BAF;
+  moz-font-feature-settings: "lnum" 1;
+  -ms-font-feature-settings: "lnum" 1;
+  -o-font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+}
+
+.breadcrumbs div > span span:not(:first-child) {
+  padding-left: rem(22px);
+  margin-left: rem(15px);
+  background: url('../img/breadcrumbs/arrow.svg') no-repeat;
+  background-position: center left;
+}
+
+.breadcrumbs a {
+  color: #001960;
+  transition: 0.4s ease-out;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs span[aria-current="page"] {
+  color: #7F8BAF;
+}
+
+@media (max-width: 1330px) {
+  .breadcrumbs div > span {
+    padding-top: rem(198px);
+  }
+}
+
+@media (max-width: 1199px) {
+  .breadcrumbs div > span {
+    padding-top: rem(163px);
+  }
+}
+
+@media (max-width: 991px) {
+  .breadcrumbs div > span {
+    padding-top: rem(114px);
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumbs div > span {
+    padding-top: rem(5px);
+    padding-bottom: rem(15px);
+  }
+}
+

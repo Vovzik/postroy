@@ -1,0 +1,157 @@
+.consultation {
+  &__inner {
+    border-radius: rem(5px);
+    background: #001960;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(36px) rem(50px);
+  }
+
+  &__info {
+    width: rem(616px);
+    margin-right: rem(30px);
+  }
+
+  &__title {
+    font-size: rem(24px);
+    font-weight: 600;
+    line-height: 130%;
+    color: #ffffff;
+    margin-bottom: rem(10px);
+  }
+
+  &__text {
+    font-size: rem(18px);
+    color: #ffffff;
+  }
+
+  &__form {
+    width: rem(447px);
+    form {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__text-right {
+    font-size: rem(14px);
+    color: #ffffff;
+    margin-top: rem(10px);
+  }
+
+  &__text-link {
+    color: #ffffff;
+    text-decoration: underline;
+    display: inline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__phone {
+    background: #F4F6F9;
+    border-radius: rem(5px);
+    padding: 0px rem(15px);
+    font-size: rem(15px);
+    color: #8F9ABA;
+    height: rem(39px);
+    width: 100%;
+    &::placeholder {
+      color: #8F9ABA;
+    }
+  }
+
+  .wpcf7-form-control-wrap {
+    margin-right: rem(10px);
+  }
+
+  &__btn {
+    width: rem(164px);
+    padding: rem(10px);
+    border-radius: rem(5px);
+    border: rem(1px) solid #FFFFFF;
+    font-size: rem(15px);
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    flex: 0 0 auto;
+    &:hover {
+      background: #ffffff;
+      color: #001960;
+    }
+  }
+
+   @media (max-width: 1199px) {
+     &__form form {
+       flex-direction: column;
+     }
+
+     .wpcf7-form-control-wrap {
+       margin: 0px;
+       margin-bottom: rem(10px);
+     }
+
+     &__btn {
+       width: 100%;
+     }
+   }
+
+   @media (max-width: 767px) {
+     &__inner {
+       flex-direction: column;
+       align-items: flex-start;
+     }
+     .wpcf7-form-control-wrap {
+       width: 100%;
+     }
+     &__info {
+       width: 100%;
+       margin: 0px;
+       margin-bottom: rem(25px);
+     }
+
+     &__form {
+       width: 100%;
+     }
+   }
+
+   @media (max-width: 480px) {
+     &__inner {
+       padding: rem(25px) rem(20px);
+     }
+
+     &__text {
+       font-size: rem(15px);
+     }
+   }
+}
+
+.wpcf7-response-output,
+.wpcf7-spinner {
+  display: none;
+}
+
+.popup-form-send {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #F4F6F9;
+  z-index: 1001;
+  padding: rem(20px);
+  font-weight: 500;
+  border-radius: rem(5px);
+  transition: 0.4s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  color: green;
+  width: rem(310px);
+  text-align: center;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+

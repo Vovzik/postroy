@@ -1,0 +1,112 @@
+.catalog {
+  &__content-top {
+    padding: rem(25px) 0px;
+    background: #001960;
+    .wpc-custom-selected-terms {
+      display: none;
+    }
+  }
+  &.catalog-search  .products__column {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: rem(24px);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 130%;
+    padding-left: rem(48px);
+  }
+
+  &__content {
+    padding: rem(25px) 0px rem(50px);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: rem(5px);
+  }
+
+  &__item {
+    border-radius: rem(5px);
+    background: #F4F6F9;
+    padding: rem(20px);
+    min-height: rem(230px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.4s ease-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__img {
+    width: rem(100px);
+    margin-bottom: rem(20px);
+  }
+
+  &__subtitle {
+    font-size: rem(16px);
+    font-weight: 500;
+    color: #001960;
+    margin-bottom: rem(5px);
+  }
+
+  &__text {
+    font-family: 'Raleway-4020', sans-serif;
+    font-size: rem(12px);
+    font-weight: 500;
+    color: #001960a1;
+    -moz-font-feature-settings:"lnum" 1;
+    -ms-font-feature-settings:"lnum" 1;
+    -o-font-feature-settings:"lnum" 1;
+    -webkit-font-feature-settings:"lnum" 1;
+    font-feature-settings:"lnum" 1;
+  }
+
+  @media (max-width: 1199px) {
+    &__items {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__items {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__title {
+      padding-left: rem(25px);
+    }
+
+    &__content {
+      padding: rem(25px) 0px;
+    }
+
+    &__item {
+      min-height: rem(164px);
+    }
+
+
+    &__subtitle {
+      font-size: rem(14px);
+    }
+  }
+}
+

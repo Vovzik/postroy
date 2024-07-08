@@ -1,0 +1,134 @@
+.thank-you {
+  font-family: "Raleway-4020", sans-serif;
+  -moz-font-feature-settings: "lnum" 1;
+  -ms-font-feature-settings: "lnum" 1;
+  -o-font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+  &__content {
+    padding: rem(203px) 0px rem(60px);
+  }
+
+  &__title {
+    font-size: rem(24px);
+    font-weight: 600;
+    color: #001960;
+    text-transform: uppercase;
+    margin-bottom: rem(30px);
+    text-align: center;
+    line-height: 130%;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(20px);
+  }
+
+  &__column {
+    border-radius: rem(5px);
+    background: #F4F6F9;
+    padding: rem(30px);
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(18px);
+    font-weight: 700;
+    line-height: 130%;
+    color: #001960;
+    text-transform: uppercase;
+    margin-bottom: rem(10px);
+  }
+
+  &__item {
+    font-size: rem(18px);
+    font-weight: 400;
+    color: #001960;
+    @media (max-width: 480px) {
+      font-size: rem(14px);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__text {
+    font-size: rem(18px);
+    font-weight: 600;
+    color: #001960;
+    @media (max-width: 480px) {
+      font-size: rem(14px);
+    }
+  }
+
+  &__table {
+    th {
+      text-align: left;
+      font-size: rem(18px);
+      font-weight: 600;
+      color: #001960;
+      padding: rem(5px);
+      @media (max-width: 480px) {
+        font-size: rem(14px);
+      }
+    }
+
+    .order_item {
+      td.product-name {
+        display: grid;
+        grid-template-columns: 1fr rem(50px);
+        grid-gap: rem(5px);
+      }
+    }
+
+    td {
+      font-size: rem(18px);
+      font-weight: 400;
+      color: #001960;
+      padding: rem(5px);
+      vertical-align: top;
+      @media (max-width: 480px) {
+        font-size: rem(14px);
+      }
+    }
+
+    .wc-item-meta li {
+      display: flex;
+      align-items: center;
+      p {
+        margin-left: rem(3px);
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__content {
+      padding: rem(150px) 0px rem(60px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+
+  }
+
+  @media (max-width: 480px) {
+    &__column {
+      padding: rem(15px);
+    }
+
+    &__content {
+      padding: rem(30px) 0px;
+    }
+  }
+}
+

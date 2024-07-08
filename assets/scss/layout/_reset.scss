@@ -1,0 +1,136 @@
+$container: rem(1330px);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: 0 0;
+  outline-offset: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { 
+  margin: 0px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+p {
+  margin: 0px;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+h1 {
+  margin: 0px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: 130%;
+  color: #000;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+a {
+  color: #000;
+}
+
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+
+@media (min-width:  576px) {
+  .container {
+    max-width: rem(560px);
+    margin: 0 auto;
+    padding: 0px 15px;
+  }
+}
+
+@media (min-width:  768px) {
+  .container {
+    max-width: rem(740px);
+    margin: 0 auto;
+    padding: 0px 15px;
+  }
+}
+
+
+@media (min-width:  992px) {
+  .container {
+    max-width: rem(980px);
+    margin: 0 auto;
+    padding: 0px 15px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0px 15px;
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+

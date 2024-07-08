@@ -1,0 +1,47 @@
+.quantity {
+  &__box {
+    display: flex;
+    align-items: center;
+    border: rem(1px) solid #D9DDE7;
+    background: #ffffff;
+    border-radius: rem(5px);
+    padding: rem(8px);
+  }
+
+  &__input {
+    flex-grow: 1;
+    font-family: "Raleway-4020", sans-serif;
+    font-size: rem(18px);
+    font-weight: 500;
+    color: #001960;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    padding: 0px rem(3px);
+    width: 100%;
+    text-align: center;
+  }
+
+  &__btn {
+    width: rem(24px);
+    height: rem(24px);
+    flex: 0 0 auto;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__minus {
+    background: url("../img/single-product/minus.svg") no-repeat;
+    background-position: center;
+  }
+
+  &__plus {
+    background: url("../img/single-product/plus.svg") no-repeat;
+    background-position: center;
+  }
+}
