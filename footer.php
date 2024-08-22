@@ -108,9 +108,11 @@
                             // перебираем данные
                             while ( have_rows('informacziya', 8) ) : the_row();
                                   ?>
-                                <p class="footer__address-text">
+                                <?php if (get_sub_field('footer_info')) :?>
+                                  <p class="footer__address-text">
                                     <?php  the_sub_field('footer_info'); ?>
-                                </p>
+                                  </p>
+                                 <?php endif;?>
                                   <?
 
                             endwhile;
@@ -130,9 +132,6 @@
                             </div>
                             <div class="footer__contacts-text">
                                 <?php the_field('footer_telefon', 8) ?>
-                            </div>
-                            <div class="footer__contacts-text">
-                                <?php the_field('footer_telefon_2', 8) ?>
                             </div>
                             <a class="footer__contacts-btn js__popup-link" data-modal="#popup" href="#">
                                 <?php the_field('footer_knopka', 8) ?>

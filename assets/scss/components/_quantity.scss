@@ -38,10 +38,18 @@
   &__minus {
     background: url("../img/single-product/minus.svg") no-repeat;
     background-position: center;
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   &__plus {
     background: url("../img/single-product/plus.svg") no-repeat;
     background-position: center;
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }

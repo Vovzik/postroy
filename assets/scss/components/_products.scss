@@ -139,9 +139,15 @@
           border-radius: rem(5px);
           border: rem(1px) solid #D9DDE7 !important;
           padding: rem(11px) rem(16px) !important;
+          font-family: "Raleway-4020", sans-serif;
           font-size: rem(14px);
           font-weight: 500 !important;
           color: #001960;
+          -moz-font-feature-settings: "lnum" 1;
+          -ms-font-feature-settings: "lnum" 1;
+          -o-font-feature-settings: "lnum" 1;
+          -webkit-font-feature-settings: "lnum" 1;
+          font-feature-settings: "lnum" 1;
           transition: 0.4s ease-out;
 
           &:hover {

@@ -24,7 +24,8 @@ if (empty($product) || !$product->is_visible()) {
     return;
 }
 ?>
-<div <?php wc_product_class( is_product() ? 'product__item swiper-slide' : 'product__item', $product); ?>>
+
+<div <?php wc_product_class( is_product() || is_front_page() ? 'product__item swiper-slide' : 'product__item', $product); ?>>
     <?php
     /**
      * Hook: woocommerce_before_shop_loop_item.

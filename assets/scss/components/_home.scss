@@ -111,12 +111,10 @@
     object-fit: cover;
     object-position: center;
     opacity: 0;
-    transform: scale(0);
-    transition: 0.9s ease-out;
+    transition: 0.7s ease-out;
 
     &.active {
       opacity: 1;
-      transform: scale(1);
     }
   }
 
@@ -138,7 +136,13 @@
   }
 
   &__list-link {
+    font-family: "Raleway-4020", sans-serif;
     font-size: rem(18px);
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
     color: #ffffff;
     text-decoration: underline;
     display: flex;
@@ -214,6 +218,10 @@
     &__decor {
       width: rem(200px);
     }
+
+    &__box {
+     padding: rem(20px);
+    }
   }
 
   @media (max-width: 991px) {
@@ -247,6 +255,8 @@
     &__navigation {
       left: 50%;
       transform: translate(-50%, 0px);
+      width: 90%;
+      justify-content: center;
     }
   }
 
@@ -274,7 +284,7 @@
     }
 
     &__slider {
-      padding: rem(25px) rem(20px) rem(71px) rem(20px);
+      padding: rem(25px) rem(20px) rem(100px) rem(20px);
     }
   }
 
@@ -310,6 +320,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0px rem(15px);
+  gap: rem(5px);
   width: auto !important;
 }
 
@@ -327,7 +338,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: rem(5px) !important;
+    margin-right: rem(0px) !important;
   }
 }
 

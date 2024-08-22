@@ -23,6 +23,7 @@ defined( 'ABSPATH' ) || exit;
 /* translators: %s: Quantity. */
 $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'woocommerce' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'woocommerce' );
 
+
 ?>
 <div class="quantity">
 	<?php
@@ -34,7 +35,8 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 	do_action( 'woocommerce_before_quantity_input_field' );
 	?>
     <div class="quantity__box">
-        <div class="quantity__btn quantity__minus"></div>
+
+          <div class="quantity__btn quantity__minus"></div>
         <input
                 type="<?php echo esc_attr( $type ); ?>"
             <?php echo $readonly ? 'readonly="readonly"' : ''; ?>

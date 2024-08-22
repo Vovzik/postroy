@@ -112,8 +112,14 @@
   }
 
   &__contacts-text {
+    font-family: "Raleway-4020", sans-serif;
     font-size: rem(16px);
     color: #1D1D1D;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
     &:not(:last-child) {
       margin-bottom: rem(10px);
     }

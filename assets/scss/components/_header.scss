@@ -40,6 +40,7 @@
     transition: 0.4s ease-out;
     border: rem(1px) solid #001960;
     flex: 0 0 auto;
+
     span {
       -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -122,11 +123,12 @@
       border: 0px !important;
       padding: 0px rem(50px) 0px rem(20px) !important;
       font-family: 'Inter Tight', sans-serif;
-      font-size: rem(15px)  !important;
+      font-size: rem(15px) !important;
       font-weight: 300 !important;
       line-height: 130% !important;
       color: #0019607d !important;
       z-index: auto !important;
+
       &::placeholder {
         color: #0019607d !important;
       }
@@ -144,6 +146,7 @@
 
     .aws-search-btn_icon {
       width: rem(24px) !important;
+
       svg {
         fill: #ffffff;
       }
@@ -197,11 +200,11 @@
     font-size: rem(15px);
     font-weight: 600;
     color: #001960;
-    -moz-font-feature-settings:"lnum" 1;
-    -ms-font-feature-settings:"lnum" 1;
-    -o-font-feature-settings:"lnum" 1;
-    -webkit-font-feature-settings:"lnum" 1;
-    font-feature-settings:"lnum" 1;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
     padding-left: rem(23px);
     background: url("../img/header/phone.svg") no-repeat;
     background-position: top left;
@@ -220,29 +223,28 @@
   }
 
   &__nav {
-    margin-right: rem(38px);
+    margin-right: rem(1px);
   }
 
   &__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
     > li {
       position: relative;
 
       &:not(:last-child) {
-        margin-right: rem(3px);
+        margin-right: rem(2px);
       }
 
-      &:hover .sub-menu {
+      &:hover > .sub-menu {
         opacity: 1;
         visibility: visible;
       }
     }
 
     > li > a {
-      font-size: rem(15px);
+      font-size: rem(14px);
       font-weight: 500;
       color: #001960;
       border-radius: rem(5px);
@@ -282,7 +284,7 @@
 
     > li {
       &:nth-child(1) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu.svg') no-repeat;
@@ -290,7 +292,7 @@
       }
 
       &:nth-child(2) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu2.svg') no-repeat;
@@ -298,7 +300,7 @@
       }
 
       &:nth-child(3) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu3.svg') no-repeat;
@@ -306,7 +308,7 @@
       }
 
       &:nth-child(4) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu4.svg') no-repeat;
@@ -314,7 +316,7 @@
       }
 
       &:nth-child(5) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu5.svg') no-repeat;
@@ -322,7 +324,7 @@
       }
 
       &:nth-child(6) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu6.svg') no-repeat;
@@ -330,7 +332,7 @@
       }
 
       &:nth-child(7) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu7.svg') no-repeat;
@@ -338,7 +340,7 @@
       }
 
       &:nth-child(8) a:before {
-        width: rem(19px);
+        width: rem(18px);
         height: rem(12px);
         margin-right: rem(5px);
         background: url('../img/header/menu8.svg') no-repeat;
@@ -382,12 +384,14 @@
     align-items: center;
     margin-left: rem(21px);
     transition: 0.4s ease-out;
+
     &:before {
       content: '';
       width: rem(21px);
       height: rem(21px);
       background: url("../img/header/basket.svg") no-repeat;
     }
+
     & > div {
       line-height: 100%;
     }
@@ -424,22 +428,40 @@
     top: 100%;
     left: 0px;
     border-radius: rem(5px);
-    overflow: hidden;
     background: #ffffff;
     box-shadow: 0px 4px 8px 0px #0019600D;
     width: rem(191px);
     opacity: 0;
     transition: 0.4s ease-out;
     visibility: hidden;
+    z-index: 1;
+
+    ul {
+      top: 0px;
+      left: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: auto;
+    }
+
 
     li {
+      position: relative;
+
       a {
+        font-family: "Raleway-4020", sans-serif;
         font-size: rem(15px);
         font-weight: 500;
         color: #001960;
         width: 100%;
         transition: 0.4s ease-out;
         padding: rem(10px) rem(25px);
+        -moz-font-feature-settings: "lnum" 1;
+        -ms-font-feature-settings: "lnum" 1;
+        -o-font-feature-settings: "lnum" 1;
+        -webkit-font-feature-settings: "lnum" 1;
+        font-feature-settings: "lnum" 1;
+
         &:after {
           content: '';
           width: 100%;
@@ -449,11 +471,31 @@
           position: relative;
           bottom: rem(-10px);
         }
+
         &:hover {
           background: #EFF0F7;
         }
       }
     }
+
+    li {
+      &:hover .sub-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    li.menu-item-has-children > a:before {
+      content: '';
+      width: rem(10px);
+      height: rem(9px);
+      background: url('../img/header/arrow.svg') no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      top: rem(17px);
+      right: rem(9px);
+    }
+
   }
 
   &__catalog {
@@ -601,11 +643,11 @@
     font-size: rem(18px);
     font-weight: 500;
     color: #001960;
-    -moz-font-feature-settings:"lnum" 1;
-    -ms-font-feature-settings:"lnum" 1;
-    -o-font-feature-settings:"lnum" 1;
-    -webkit-font-feature-settings:"lnum" 1;
-    font-feature-settings:"lnum" 1;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
     padding-left: rem(28px);
     background: url("../img/header/phone.svg") no-repeat;
     background-position: rem(1px) rem(2px);
@@ -671,9 +713,15 @@
   }
 
   &__catalog-list .sub-menu .sub-menu a {
+    font-family: "Raleway-4020", sans-serif;
     font-size: rem(15px);
     color: #001960;
     transition: 0.4s ease-out;
+    -moz-font-feature-settings: "lnum" 1;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
   }
 
   &__catalog-list .sub-menu .sub-menu a:hover {
@@ -686,7 +734,7 @@
     }
 
     > a {
-      font-size: rem(18px);
+      font-size: rem(17px);
       font-weight: 500;
       color: #001960;
       padding: rem(7px) rem(10px);
@@ -794,7 +842,7 @@
     margin-top: rem(3px);
   }
 
-  &__catalog-list > li:nth-child(8) > a:before {
+  &__catalog-list > li:nth-child(9) > a:before {
     content: '';
     width: rem(19px);
     height: rem(12px);
@@ -1017,7 +1065,7 @@
 
   @media (max-width: 480px) {
     &__search .aws-container {
-     width: 100%;
+      width: 100%;
       border-radius: rem(3px);
       overflow: hidden;
     }
@@ -1025,6 +1073,7 @@
       width: 100vw;
       height: auto;
       top: rem(79px);
+
       &:before {
         content: '';
         display: block;
