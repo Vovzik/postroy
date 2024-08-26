@@ -119,7 +119,7 @@ function get_categories_product_home($categories_list = '')
 
     $get_categories_product = get_terms('product_cat', [
         'orderby' => 'name', // Поле для сортировки
-        'order' => 'ASC', // Направление сортировки
+        'order' => 'DESC', // Направление сортировки
         'hide_empty' => 1, // Скрывать пустые (1 - да, 0 - нет)
         'parent' => 0,
     ]);

@@ -16,6 +16,10 @@ a {
   display: inline-block;
 }
 
+a[href^="tel"] {
+  color: inherit;
+}
+
 ul,
 li {
   list-style: none;

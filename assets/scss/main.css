@@ -1619,6 +1619,10 @@ a {
   display: inline-block;
 }
 
+a[href^=tel] {
+  color: inherit;
+}
+
 ul,
 li {
   list-style: none;
@@ -7246,6 +7250,11 @@ color: #FFFFFF;
   line-height: 130%;
   flex: 0 0 auto;
 }
+.footer__test {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
 .footer form {
   position: relative;
 }
@@ -7265,13 +7274,12 @@ color: #FFFFFF;
   color: #96A0BB;
 }
 .footer__btn {
-  border-radius: 0.3125rem;
+  border-radius: 5px;
   background: #ffffff;
-  padding: 1rem 1.0625rem;
-  font-size: 0.9375rem;
+  padding: 16px 17px;
+  font-size: 15px;
   font-weight: 500;
   color: #001960;
-  cursor: pointer;
   transition: 0.4s ease-out;
   position: absolute;
   top: 0px;
@@ -7526,6 +7534,7 @@ color: #FFFFFF;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5625rem 1.75rem;
+    height: auto;
   }
   .footer__about-list, .footer__address, .footer__contacts {
     width: auto;
@@ -7589,6 +7598,9 @@ color: #FFFFFF;
   }
   .footer__title {
     margin-bottom: 0.9375rem;
+  }
+  .footer__about-box {
+    grid-gap: 1.5625rem 0.375rem;
   }
   .footer__list {
     display: grid;

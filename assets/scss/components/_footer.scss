@@ -43,6 +43,12 @@
     flex: 0 0 auto;
   }
 
+  &__test {
+    font-size: rem(12px);
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+
   form {
     position: relative;
   }
@@ -63,14 +69,14 @@
     }
   }
 
+
   &__btn {
-    border-radius: rem(5px);
+    border-radius: 5px;
     background: #ffffff;
-    padding: rem(16px) rem(17px);
-    font-size: rem(15px);
+    padding: 16px 17px;
+    font-size: 15px;
     font-weight: 500;
     color: #001960;
-    cursor: pointer;
     transition: 0.4s ease-out;
     position: absolute;
     top: 0px;
@@ -351,6 +357,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: rem(25px) rem(28px);
+      height: auto;
     }
 
     &__about-list,
@@ -430,6 +437,10 @@
      &__title {
        margin-bottom: rem(15px);
      }
+
+    &__about-box {
+      grid-gap: rem(25px) rem(6px);
+    }
 
     &__list {
       display: grid;
